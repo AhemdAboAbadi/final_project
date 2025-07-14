@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology Store - TechBids</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-hammer"></i>
+        <span>TechBids</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#products" class="nav-link">Products</a></li>
+        <li><a href="#categories" class="nav-link">Categories</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to TechBids Technology Store</h1>
+      <p>Discover the latest tech products at the best prices</p>
+      <button class="cta-button" onclick="showAlert('Hello! Thank you for visiting')">Shop Now</button>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section id="products" class="products">
+    <div class="container">
+      <h2>Featured Products</h2>
+      <div class="products-grid" id="productsGrid">
+        <div class="product-card">
+          <img
+            src="https://images.unsplash.com/photo-1507208773393-40d9fc670acf?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Laptop">
+          <h3>Gaming Laptop</h3>
+          <p class="price">$2,500</p>
+          <button class="add-to-cart" onclick="addToCart('Gaming Laptop')">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?q=80&w=929&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Smartphone">
+          <h3>Smartphone</h3>
+          <p class="price">$1,200</p>
+          <button class="add-to-cart" onclick="addToCart('Smartphone')">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?q=80&w=2489&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Headphones">
+          <h3>Wireless Headphones</h3>
+          <p class="price">$300</p>
+          <button class="add-to-cart" onclick="addToCart('Wireless Headphones')">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://images.unsplash.com/photo-1579811216948-6f57c19376a5?q=80&w=996&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Smartwatch">
+          <h3>Smartwatch</h3>
+          <p class="price">$800</p>
+          <button class="add-to-cart" onclick="addToCart('Smartwatch')">Add to Cart</button>
+        </div>
+      </div>
+      <button class="show-more-btn" onclick="showMoreProducts()">Show More Products</button>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section id="categories" class="categories">
+    <div class="container">
+      <h2>Product Categories</h2>
+      <div class="categories-grid">
+        <div class="category-card">
+          <i class="fas fa-laptop"></i>
+          <h3>Computers</h3>
+          <p>Laptops and Desktop Computers</p>
+        </div>
+        <div class="category-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile Devices</h3>
+          <p>Smartphones and Tablets</p>
+        </div>
+        <div class="category-card">
+          <i class="fas fa-headphones"></i>
+          <h3>Accessories</h3>
+          <p>Headphones and Tech Accessories</p>
+        </div>
+        <div class="category-card">
+          <i class="fas fa-gamepad"></i>
+          <h3>Gaming</h3>
+          <p>Gaming Devices and Accessories</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promotional Section -->
+  <section class="promo">
+    <div class="container">
+      <div class="promo-content">
+        <h2>Special Offer!</h2>
+        <p>Get 20% off on all products</p>
+        <button class="promo-btn" onclick="togglePromo()">View Details</button>
+        <div class="promo-details" id="promoDetails" style="display: none;">
+          <p>Offer valid until end of month</p>
+          <p>Use discount code: TECH20</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>TechBids</h3>
+          <p>The leading technology store in the region</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Information</h3>
+          <p><i class="fas fa-phone"></i> +970592238888</p>
+          <p><i class="fas fa-envelope"></i> ahmed.m.aboabadi@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Gaza - Palestine</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TechBids. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="dom.js"></script>
+</body>
+
+</html>
