@@ -14,10 +14,6 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 )
 
-function showAlert(message) {
-  alert(message)
-}
-
 function addToCart(productName) {
   alert(`${productName} has been successfully added to cart!`)
 }
@@ -66,8 +62,6 @@ function showMoreProducts() {
   })
 
   showMoreBtn.style.display = "none"
-
-  showAlert("More products loaded successfully!")
 }
 
 function togglePromo() {
